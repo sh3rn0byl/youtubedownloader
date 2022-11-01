@@ -5,12 +5,18 @@ from pytube import YouTube as yt
 from pytube import Playlist
 import time
 
-print("\n\nWelcome to Youtube Downloader\n\n")
+print("\n\n")
+print('''__   ___            _                     _                 _           
+\ \ / / |_       __| | _____      ___ __ | | ___   __ _  __| | ___ _ __ 
+ \ V /| __|____ / _` |/ _ \ \ /\ / / '_ \| |/ _ \ / _` |/ _` |/ _ \ '__|
+  | | | ||_____| (_| | (_) \ V  V /| | | | | (_) | (_| | (_| |  __/ |   
+  |_|  \__|     \__,_|\___/ \_/\_/ |_| |_|_|\___/ \__,_|\__,_|\___|_| ''')
+print("\n                                         created by sh3rn0byl\n\n")
 
 loop = True
 while loop :
 
-    print("###############################################\n")
+    print("######################################################################\n")
 
     print("Choose 1 for audio and 2 for video or quit to exit the program :")
     av = str(input("-1- Audio \n-2- Video\n====> "))
@@ -21,7 +27,7 @@ while loop :
     if av == "quit":
         exit()
 
-    print("\n##############################################\n")
+    print("\n####################################################################\n")
 
     print("Choose 1 for Playlist and 2 for single video")
     playlist_svideo = input("-1- Playlist \n-2- Single Video \n====> ")
@@ -32,7 +38,7 @@ while loop :
     if playlist_svideo == "quit":
         exit()
 
-    print("\n##############################################\n")
+    print("\n####################################################################\n")
 
     HOME_DIR = os.path.expanduser("~")
     print("Where you wanna output this file ?\nby default the audio go to the [music] folder and the video go to the [video] folder")
@@ -50,11 +56,11 @@ while loop :
         full_path = os.path.join(HOME_DIR , path_choice)
 
     def downloader(aud_vid , plist_svideo , path):
-        print("\n##############################################\n")
+        print("\n################################################################\n")
 
         url = input("Enter the url of the video or playlist\n====> ")
 
-        print("\n##############################################\n")
+        print("\n################################################################\n")
 
         try :
             # First if statement for downloading the audio
